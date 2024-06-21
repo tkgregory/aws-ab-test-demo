@@ -1,3 +1,5 @@
+[![CI](https://github.com/tkgregory/aws-ab-test-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/tkgregory/aws-ab-test-demo/actions/workflows/ci.yml)
+
 # AWS A/B Testing Demo
 
 Deploy this project to AWS to run an A/B test which returns one of 2 web pages for a single HTTP request.
