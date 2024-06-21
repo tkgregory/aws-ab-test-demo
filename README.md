@@ -37,4 +37,4 @@ Log into the AWS CloudFront console and delete the Lambda function associations 
 1. Scroll to the bottom and under *Function associations* change every *Function type* to *No association*
 1. *Save changes*
 
-Now on the command line run `serverless remove`.
+Wait 30 minutes then on the command line run `serverless remove`.
