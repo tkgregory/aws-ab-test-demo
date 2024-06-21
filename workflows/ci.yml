@@ -1,0 +1,17 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    concurrency: ci-dev
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        submodules: recursive
+    - run: npm ci
+    - uses: serverless/github-action@v3.2
+      with:
+        args: package

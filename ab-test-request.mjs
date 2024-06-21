@@ -31,7 +31,6 @@ export const handler = async (event, _context, callback) => {
 		headers['create-cookie-value'] = [{ value: abChoice }]
 	}
 
-
 	request.uri = abChoice === "A" ? '/code-like-leonardo/' : '/code-like-leonardo-v2/';
 	callback(null, request);
 };

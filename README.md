@@ -5,7 +5,7 @@ Deploy this project to AWS to run an A/B test which returns one of 2 web pages f
 ## Deployment
 
 ```
-npm i serverless -g
+npm i serverless@3.39.0 -g
 npm i
 serverless deploy --verbose
 ```
@@ -23,3 +23,16 @@ Now:
 If you delete your cookies, you'll get another randomly chosen web page.
 
 Enjoy!
+
+## Cleaning up
+
+You must first do some manual clean up for the automated deletion to succeed.
+
+Log into the AWS CloudFront console and delete the Lambda function associations for the _default_ behaviour.
+1. Select your CloudFront distribution
+1. Go to _Behaviours_
+1. Select *Default* then *Edit*
+1. Scroll to the bottom and under *Function associations* change every *Function type* to *No association*
+1. *Save changes*
+
+Now on the command line run `serverless remove`.
